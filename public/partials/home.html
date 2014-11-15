@@ -1,0 +1,26 @@
+<ion-view title="Home">
+  <ion-content padding="true" scroll="true" class="has-header">
+    <h4 class="pull-right">Welcome {{userEmail}}</h4>
+    <div class="clear"></div>
+    <h4>Online Users
+      <button class="button button-clear button-dark pull-right" ng-click="logout()">
+        Logout
+      </button>
+    </h4>
+    <hr/>
+    <div class="list" ng-controller="HomeCtrl">
+      <label class="item item-input" ng-hide="users.length == 1">
+        <input type="text" placeholder="Search Users" ng-model="search.user">
+      </label>
+      <span class="item item-button-right" ng-repeat="u in users | filter:search:user" ng-if="u.user != userEmail">
+        <i class="icon ion-ionic"></i>&nbsp;&nbsp;&nbsp; {{u.user}}
+        <button class="button button-dark" ng-click="triggerChat(u)">
+          <i class="icon ion-chatbubbles"></i>
+        </button>
+      </span>
+      <span class="item" ng-show="users.length == 1">
+        <i class="icon ion-alert"></i>&nbsp;&nbsp;&nbsp; No Users Online
+      </span>
+      <div class="list">
+  </ion-content>
+</ion-view>

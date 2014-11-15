@@ -1,0 +1,19 @@
+<ion-view title="Login">
+  <ion-content padding="true" class="has-header">
+    <form ng-controller="LoginCtrl">
+      <ion-list>
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="email" placeholder="Email Address" ng-model="login.email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="Password" ng-model="login.password">
+        </label>
+      </ion-list>
+      <div class="spacer" style="height: 40px;"></div>
+      <button class="button button-dark button-block" ng-disabled="!(login.email && login.password)" ng-click="loginUser()">Log in</button>
+      <a href="#/signup" class="button button-positive button-clear button-block">Or create an account</a>
+    </form>
+  </ion-content>
+</ion-view>

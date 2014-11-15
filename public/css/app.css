@@ -1,0 +1,10 @@
+.pull-right {
+  float: right;
+}
+hr,.clear {
+  clear: both;
+}
+.button-dark.pull-right {
+  padding: 0px;
+  margin-top: -11px;
+}

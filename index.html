@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- loading animation :: Used as a splash screen-->
+  <!-- http://codepen.io/obomemo/pen/cfdGr -->
+  <style type="text/css">
+  body {
+    background-color: #333;
+  }
+  .loading {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+  }
+  .loading:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    -webkit-animation: loading 0.5s linear 0s infinite normal;
+  }
+  @-webkit-keyframes loading {
+    0% {
+      box-shadow: -10px -10px 1px 2px white, -10px 0px 1px 2px white, -10px 10px 1px 2px white, 0px -10px 1px 2px white, 0px 0px 1px 2px white, 0px 10px 1px 2px white, 10px -10px 1px 2px white, 10px 0px 1px 2px white, 10px 10px 1px 2px white;
+    }
+    25% {
+      box-shadow: -10px -10px 1px 2px white, -10px 0px 1px 4px white, -10px 10px 1px 2px white, 0px -10px 1px 4px white, 0px 0px 1px 2px white, 0px 10px 1px 2px white, 10px -10px 1px 2px white, 10px 0px 1px 2px white, 10px 10px 1px 2px white;
+    }
+    50% {
+      box-shadow: -10px -10px 1px 2px white, -10px 0px 1px 2px white, -10px 10px 1px 4px white, 0px -10px 1px 2px white, 0px 0px 1px 4px white, 0px 10px 1px 2px white, 10px -10px 1px 4px white, 10px 0px 1px 2px white, 10px 10px 1px 2px white;
+    }
+    75% {
+      box-shadow: -10px -10px 1px 2px white, -10px 0px 1px 2px white, -10px 10px 1px 2px white, 0px -10px 1px 2px white, 0px 0px 1px 2px white, 0px 10px 1px 4px white, 10px -10px 1px 2px white, 10px 0px 1px 4px white, 10px 10px 1px 2px white;
+    }
+    100% {
+      box-shadow: -10px -10px 1px 4px white, -10px 0px 1px 2px white, -10px 10px 1px 2px white, 0px -10px 1px 2px white, 0px 0px 1px 2px white, 0px 10px 1px 2px white, 10px -10px 1px 2px white, 10px 0px 1px 2px white, 10px 10px 1px 4px white;
+    }
+  }
+  </style>
+  <script>
+  function init() {
+    require('./app.js');
+    setTimeout(function() {
+      window.location.assign('http://localhost:3000');
+    }, 2999);
+  }
+  </script>
+</head>
+
+<body onload="init()">
+
+  <span class="loading"></span>
+</body>
+
+</html>

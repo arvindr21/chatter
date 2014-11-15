@@ -1,0 +1,23 @@
+{
+  "name": "chatter",
+  "version": "0.0.1",
+  "authors": [
+    "arvindr21 <arvind.ravulavaru@gmail.com>"
+  ],
+  "description": "Ionic Framework, Node Webkit and Firebase – A one to one chat client",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "firebase": "~2.0.3",
+    "angularfire": "~0.8.2",
+    "ionic": "~0.9.27",
+    "firebase-simple-login": "~1.6.4"
+  }
+}
